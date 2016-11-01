@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body bgcolor="#d3d3d3">
+
+{% for market in markets %}
+    <div>
+        <table border="0">
+            <tr><td>Магазин:</td><td ><h2>{{ market.name }}</h2></td></tr>
+            <tr><td>Часы работы:</td><td>{{ market.worktime }}</td></tr
+            <tr><td>Адрес:</td><td><i>{{ market.address }}</i></td></tr>
+        </table>
+    </div>
+    <hr>
+{% endfor %}
+</body>
+</html>

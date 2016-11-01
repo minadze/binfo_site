@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Страны</title>
+</head>
+<body bgcolor="#d3d3d3">
+
+{% for country in countries %}
+    <div>
+    {% with 'img/country/flags/'|add:country.iso|add:'.png' as country_flag %}
+    <img src={% static country_flag %} weigth='42px'/> <pre>[{{ country.iso }}] {{ country.name_ru }}</pre>
+    {% endwith %}
+    </div>
+{% endfor %}
+</body>
+</html>
